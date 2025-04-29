@@ -24,10 +24,10 @@ function allModules($pdo){
     $modules = query($pdo, 'SELECT * FROM module');
     return $modules->fetchAll();
 }
-function insertQuestion($pdo, $content, $image, $authorid, $moduleid){
+function insertQuestion($pdo, $content, $fileToUpLoad, $authorid, $moduleid){
     $query = 'INSERT INTO question (content, `date`, `image`,authorid,moduleid) 
-    VALUES (:content, CURDATE(), :image,:authorid, :moduleid)';
-    $parameters = [':content' => $content,'image' =>$image ,':authorid' => $authorid, ':moduleid' => $moduleid];
+    VALUES (:content, CURDATE(), :fileToUpLoad,:authorid, :moduleid)';
+    $parameters = [':content' => $content,'fileToUpLoad' =>$fileToUpLoad ,':authorid' => $authorid, ':moduleid' => $moduleid];
     query($pdo, $query, $parameters);
 }
 

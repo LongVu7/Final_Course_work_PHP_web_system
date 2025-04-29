@@ -10,7 +10,7 @@ use PHPMailer\PHPMailer\Exception;
 $mail = new PHPMailer(true);
 
 if(isset($_POST['submitContact'])) {
-    $title = "Send us a message";
+    $title = "Thank you for your feedback!";
     $email = $_POST['email'];
     $subject = $_POST['subject'];
     $message = $_POST['message'];
@@ -29,8 +29,8 @@ if(isset($_POST['submitContact'])) {
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'longvu7702@gmail.com'; // Replace with your email
-        $mail->Password = 'zpcx eifn edxu mghc'; // Replace with App Password
+        $mail->Username = 'longvu7702@gmail.com'; 
+        $mail->Password = 'zpcx eifn edxu mghc'; 
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
 
@@ -41,7 +41,7 @@ if(isset($_POST['submitContact'])) {
         $mail->Body = $message;
 
         $mail->send();
-        $output = 'Email sent successfully!';
+        $output = 'Email was sent successfully!';
     } catch (Exception $e) {
         $output = "Email could not be sent. Error: {$mail->ErrorInfo}";
     }

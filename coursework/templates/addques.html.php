@@ -28,7 +28,7 @@
         <br />
 
         <div class="card-action">
-            <input class="btn btn-primary" type="submit" name="submit" value="Add" >
+            <input class="btn btn-primary" type="submit" name="submit" value="Submit" >
         </div>
         
     
