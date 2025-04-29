@@ -1,8 +1,8 @@
 <?php 
 session_start();
 require_once 'conn.php';
-require_once 'includes/DatabaseConnection.php';
-require_once 'includes/DatabaseFunctions.php';
+include 'includes/DatabaseConnection.php';
+include 'includes/DatabaseFunctions.php';
 
 if(!isset($_SESSION['user'])){
     header('location: login.html.php');
